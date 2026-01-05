@@ -5,6 +5,11 @@ betreiben.
 
 # Neuerungen
 
+Update vom 05.01.2026
+
+Skripte hinzugefügt: start-2-lora-ra02*
+2m mit RTL-SDR und 70cm LoRa APRS mit RA02 oder kompatiblem SX127x Chip am GPIO
+
 Update vom 08.02.2025
 
 Die Skripte für digi-tnc wurden aktualisiert. Fehler beim Dupe-Timing und beim 
@@ -83,7 +88,7 @@ Stelle im Skript ein.
 Für den Empfang von APRS Signalen in AFSK werden USB RTL-SDR Sticks verwendet 
 (z.B. Nooelec NESDR Smart). 
 
-Für LoRa APRS können alle Module eingesetzt werden, welche einen SX127X LoRa 
+Für LoRa APRS können alle Module eingesetzt werden, welche einen SX127x LoRa 
 Chip verwenden und direkt über die MISO/MOSI/NSS/SCK Pins angesprochen werden 
 können. Außerdem darf im RasPi die SPI-Schnittstelle nicht aktiv sein, da RA02
 die GPIO Pins direkt ansprechen möchte. Weitere Infos siehe hier:
@@ -155,7 +160,8 @@ den Varianten mit Sendezweig (z.B. digi-tnc, LoRa-RxTx) ist zusätzlich noch
 die Datei **digibeacon.txt** anzupassen.
 
 Es ist empfehlenswert die Hinweise in jeder Skriptdatei zu lesen und ggf. zu 
-befolgen.
+befolgen, insbesondere bei Nutzung von RA02 für LoRa via GPIO. Hier können
+die anzugebenden GPIO Pins abweichen.
 
 # Welche Dateien gehören wo hin?
 Nach dem Download aller Dateien müssen die Skript- und Textdateien (*.txt
@@ -184,6 +190,8 @@ ist es der Ordner /home/pi/Desktop.
 * start-2-lora-sdr.sh (RX only iGate für 2m AFSK und 70cm LoRa APRS mit 2x 
   RTL-SDR USB Sticks)
 * start-lora-rx-esp32.sh (RX only iGate mit ESP32 Board via USB)
+* start-2-lora-ra02.sh (RX only iGate auf 144.800 + 145.825 mit RTL-SDR USB 
+  Stick sowie LoRa APRS mit SX127x Chip am GPIO)
 
 Alle Start-Skripte gibt es auch in einer zweiten Variante mit der Endung 
 "-gui" im Dateinamen. Diese sind für die Verwendung in einer grafischen 
@@ -225,7 +233,7 @@ als Unterstützung dienen.
 
 # dxlAPRS Installation (nicht notwendig beim fertigen Image)
 
-## dxlAPRS Grundinstallation:
+## dxlAPRS Grundinstallation für RaspberryPi ARMV7 32 bit
 
     cd ~
     wget http://dxlaprs.hamspirit.at/dxlAPRS_armv7hf-current.tgz
