@@ -5,17 +5,17 @@ betreiben.
 
 # Neuerungen
 
-Update vom 05.01.2026
+**Update vom 05.01.2026**
 
 Skripte hinzugefügt: start-2-lora-ra02*
 2m mit RTL-SDR und 70cm LoRa APRS mit RA02 oder kompatiblem SX127x Chip am GPIO
 
-Update vom 08.02.2025
+**Update vom 08.02.2025**
 
 Die Skripte für digi-tnc wurden aktualisiert. Fehler beim Dupe-Timing und beim 
 www-Pfad wurden ausgebessert. 
 
-Update vom 16.11.2024
+**Update vom 16.11.2024**
 
 Die Skripte in denen "ra02" benutzt wird (LoRa Chip am GPIO) haben einen 
 zusätzlichen Hinweis erhalten:
@@ -31,17 +31,17 @@ muss es abhängig vom verwendeten Modell wie folgt lauten (Bitte unten korrigier
 Überprüfen kann man dies mit dem Befehl: cat /sys/kernel/debug/gpio
 unter "gpiochip0:" sind dann die anzugebenden GPIOs für GPIO8,10,9,11 aufgeführt.
 
-Update vom 12.10.2024:
+**Update vom 12.10.2024:**
 
 Skripte zur Anbindung eines ESP32 LoRa Boards mit CA2RXU Software hinzugefügt.
 Info: https://www.dl1nux.de/lora-aprs-gateway-mit-dxlaprs-und-ttgo-lora-board/
 
-Update vom 01.05.2023
+**Update vom 01.05.2023**
 
 - QRGx.TXT Dateien Hinweis hinzugefügt.
 - Update FAQs
 
-Update vom 10.11.2022
+**Update vom 10.11.2022**
 
 Hinzugefügt 2m APRS und 70cm LoRa APRS mit zwei SDR-Sticks:
 - start-2-lora-sdr-gui.sh
@@ -50,7 +50,7 @@ Anpassungen im Kommentar vorgenommen:
 - start-lora-sdr-gui.sh 
 - start-lora-sdr.sh
 
-Update vom 13.08.2022
+**Update vom 13.08.2022**
 
 Skripte und Dateien für LoRa APRS Empfang mit SDR-Stick wurden hinzugefügt.
 - start-lora-sdr.sh für abgesetzten Betrieb über die Konsole
@@ -60,7 +60,7 @@ Damit die Skripte genutzt werden können, muss das Programm "lorarx" von OE5DXL
 vorhanden sein. Dieses ist erst seit Mai 2022 verfügbar und muss bei älteren
 Installationen ggf. manuell hinzugefügt werden.
 
-Update vom 09.02.2022
+**Update vom 09.02.2022**
 
 Die Variable "DXLPATH" wurde aus der config.txt entfernt, da die Variable bzw.
 der Pfad direkt im Skript anhand des Speicherorts des Skripts automatisch
@@ -68,7 +68,7 @@ ermittelt wird. Damit existiert eine Fehlerquelle weniger. Es müssen sich
 weiterhin alle Skript-Dateien und Textdateien (inkl. config.txt) im selben
 Verzeichnis befinden.
 
-Update vom 06.11.2021
+**Update vom 06.11.2021**
 
 In der aktuellen Version der Skripte müssen nicht mehr die Skripte selber an
 die eigenen Bedürfnisse angepasst werden. Die wichtigen Einstellungen, die für
