@@ -46,8 +46,10 @@ done < $DXLPATH/config.txt
 sudo killall -9 udpgate4 udpbox ra02
 sleep 1
 
-# Starte LoRa APRS Empfänger ra02
+# Starte LoRa APRS Empfänger ra02 (passende GPIO Belegung einkommentieren, siehe Beschreibung oben)
 xfce4-terminal --title RA02 -e 'bash -c "ra02 -p 8 10 9 11 -a -w 17 -F $LORATX -L 127.0.0.1:9702:9799 -f $LORARX -v"' &
+#xfce4-terminal --title RA02 -e 'bash -c "ra02 -p 520 522 521 523 -a -w 17 -F $LORATX -L 127.0.0.1:9702:9799 -f $LORARX -v"' &
+#xfce4-terminal --title RA02 -e 'bash -c "ra02 -p 579 581 580 582 -a -w 17 -F $LORATX -L 127.0.0.1:9702:9799 -f $LORARX -v"' &
 sleep 1
 
 # Hier werden alle AXUDP Pakete dupliziert, für die Weiterleitung an das iGate und für die Verwendung von APRSMAP oder des Monitors auf Port 9999 (monitor.sh)

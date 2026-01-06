@@ -55,8 +55,10 @@ sleep 1
 xfce4-terminal --title AFSKMODEM2 -e 'bash -c "afskmodem -f 16000 -o $DXLPATH/aprspipe2 -c 2 -M 0 -c 0 -L 127.0.0.1:9201:0 -M 1 -c 1 -L 127.0.0.1:9202:0"' &
 sleep 1
 
-# Starte LoRa APRS Empfänger ra02
+# Starte LoRa APRS Empfänger ra02 (passende GPIO Belegung einkommentieren, siehe Beschreibung oben)
 xfce4-terminal --title RA02 -e 'bash -c "ra02 -p 8 10 9 11 -a -L 127.0.0.1:9702:0 -f $LORARX -v"' &
+#xfce4-terminal --title RA02 -e 'bash -c "ra02 -p 520 522 521 523 -a -L 127.0.0.1:9702:0 -f $LORARX -v"' &
+#xfce4-terminal --title RA02 -e 'bash -c "ra02 -p 579 581 580 582 -a -L 127.0.0.1:9702:0 -f $LORARX -v"' &
 sleep 1
 
 # Hier werden alle AXUDP Pakete dupliziert, für die Weiterleitung an das iGate und für die Verwendung von APRSMAP oder des Monitors auf Port 9999 (monitor.sh)
