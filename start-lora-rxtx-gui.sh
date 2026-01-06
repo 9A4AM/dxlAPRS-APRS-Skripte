@@ -52,7 +52,7 @@ sleep 1
 
 # Hier werden alle AXUDP Pakete dupliziert, für die Weiterleitung an das iGate und für die Verwendung von APRSMAP oder des Monitors auf Port 9999 (monitor.sh)
 # Eine HF-Bake wird periodisch ausgesendet. Der Digipeater ist nicht aktiv.
-xfce4-terminal --minimize --title UDPBOX -e 'bash -c "udpbox -R 127.0.0.1:9702 -l 127.0.0.1:10702 -r 127.0.0.1:9999 -b 600:$DXLPATH/digibeacon.txt -l 127.0.0.1:9799 -v"' &
+xfce4-terminal --minimize --title UDPBOX -e 'bash -c "udpbox -R 127.0.0.1:9702 -l 127.0.0.1:10702 -r 127.0.0.1:9999 -d $MYCALL -p 0,1,2,5,6,15,17 -t 590,28 -f p28,29,33,35-39,41-43,46,47,58,59,61,64,91,95,96,123 -k 0/0/20000 -b 600:$DXLPATH/digibeacon.txt -l 127.0.0.1:9799 -v"' &
 sleep 1
 
 # udpgate4 ist das iGate, welches alle Daten an APRS-IS weiterleitet und das Webinterface bereitstellt

@@ -5,4 +5,5 @@ export DXLPATH=$(dirname `realpath $0`)
 export PATH=$DXLPATH:$PATH
 
 # Monitor starten
+echo "Listening on Port 9999 UDP. Press CTRL+C to exit."
 udpflex -U :0:9999 -V

@@ -1,11 +1,11 @@
 [Desktop Entry]
-Name=LoRa APRS RX Start
-Exec=/home/pi/dxlAPRS/aprs/start-lora-rx-gui.sh
+Name=APRS Start 2m + LoRa SDR
+Exec=/home/pi/dxlAPRS/aprs/start-2-lora-sdr-gui.sh
 Icon=/home/pi/dxlAPRS/aprs/www/icon/163.gif
 Terminal=false
 Type=Application
 Categories=APRS
 StartupNotify=false
 Path=/home/pi/dxlAPRS/aprs/
-Name[en_GB]=LoRa APRS RX Start
-Name[de_DE]=LoRa APRS RX Start
+Name[en_GB]=APRS Start 2m + LoRa SDR
+Name[de_DE]=APRS Start 2m + LoRa SDR
